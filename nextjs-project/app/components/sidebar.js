@@ -4,31 +4,38 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
-  Home, LayoutList, Headphones, Zap, Flag, Flame,
-  LayoutDashboard, Database, PlaySquare, BarChart,
-  Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network, Gauge
+  School,
+  BookOpenCheck,
+  Puzzle,
+  Monitor,
+  Trophy,
+  PieChart,
+  Gauge,
+  Mail,
+  LogOut,
 } from "lucide-react";
 
 import "../styles/withSidebar.scss";
 
 const modules = [
   { name: "Dashboard", path: "/", icon: <Gauge size={24} /> },
-  { name: "Academy", path: "/academy", icon: <Home size={24} /> },
-  { name: "Simul", path: "/simul", icon: <Network size={24} /> },
-  { name: "Classroom", path: "/classroom", icon: <Headphones size={24} /> },
-  { name: "Studies", path: "/studies", icon: <LayoutList size={24} /> },
-  { name: "Quiz", path: "/quiz", icon: <Zap size={24} /> },
-  { name: "Assignment", path: "/assignment", icon: <Flag size={24} /> },
-  { name: "Practice", path: "/practice", icon: <Flame size={24} /> },
-  { name: "Board", path: "/board", icon: <LayoutDashboard size={24} /> },
-  { name: "Database", path: "/database", icon: <Database size={24} /> },
-  { name: "Game Area", path: "/game", icon: <PlaySquare size={24} /> },
-  { name: "Reports", path: "/reports", icon: <BarChart size={24} /> },
-  { name: "Settings", path: "/settings", icon: <Settings size={24} /> },
-  { name: "Tournaments", path: "/tournaments", icon: <Users size={24} /> },
-  { name: "Leads", path: "/leads", icon: <Funnel size={24} /> },
-  { name: "Courses", path: "/courses", icon: <BookOpen size={24} /> },
-  { name: "Chat", path: "/chat", icon: <MessageCircle size={24} /> },
+
+  { name: "Training", path: "/training", icon: <School size={24} /> },
+  { name: "Lessons", path: "/lessons", icon: <BookOpenCheck size={24} /> },
+  { name: "Practice", path: "/practice", icon: <Puzzle size={24} /> },
+  { name: "Online", path: "/online-learning", icon: <Monitor size={24} /> },
+  { name: "Tournaments", path: "/tournaments", icon: <Trophy size={24} /> },
+  { name: "Performance", path: "/performance", icon: <PieChart size={24} /> },
+  {
+    name: "Support",
+    path: "/support",
+    icon: (
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
+        {/* <Phone size={16} /> */}
+        <Mail size={24} />
+      </div>
+    )
+  },
 ];
 
 export default function Sidebar() {
@@ -42,8 +49,6 @@ export default function Sidebar() {
   };
 
   const handleConfirmLogout = () => {
-    // Optional: localStorage/session clear
-    // localStorage.removeItem('token');
     setShowLogoutPopup(false);
     router.push("/");
   };
@@ -71,20 +76,16 @@ export default function Sidebar() {
           })}
         </div>
 
-        {/* 🔘 Logout Button at Bottom */}
+        {/* 🔘 Logout at Bottom */}
         <div className="sidebar-logout">
-          <a
-            href="#"
-            onClick={handleLogoutClick}
-            className="sidebar-link"
-          >
+          <a href="#" onClick={handleLogoutClick} className="sidebar-link">
             <LogOut size={24} />
             <span>Logout</span>
           </a>
         </div>
       </aside>
 
-      {/* 🔔 Logout Confirmation Popup */}
+      {/* 🔔 Logout Confirmation */}
       {showLogoutPopup && (
         <div style={{
           position: 'fixed',
@@ -114,7 +115,8 @@ export default function Sidebar() {
                   cursor: 'pointer',
                   border: '1px solid #ccc',
                   borderRadius: '4px',
-                  backgroundColor: '#000000'
+                  backgroundColor: '#000000',
+                  color: '#fff',
                 }}>
                 Cancel
               </button>
