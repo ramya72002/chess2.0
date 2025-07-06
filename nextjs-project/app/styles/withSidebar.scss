@@ -6,12 +6,26 @@
   
   .sidebar {
     width: 80px;
+    height: 100vh;              // Full viewport height
+    overflow-y: auto;           // Vertical scroll when needed
+    position: sticky;           // Optional: keeps it fixed while scrolling page
+    top: 0;
     background-color: #0e1b2a;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
     color: white;
+
+      
+    /* Hide scrollbar (Chrome, Safari, Edge) */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar (Firefox) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
   
   .sidebar-link {
