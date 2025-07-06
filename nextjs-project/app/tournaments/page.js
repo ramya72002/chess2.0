@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AcademySimulator = () => {
+const Tournaments = () => {
     return (
         <div>
-            <h1>Academy Simulator</h1>
-            <p>Welcome to the Academy Simulator page!</p>
+            <h1>Tournaments</h1>
+            <p>Welcome to the Tournaments page!</p>
         </div>
     );
 };
 
-export default AcademySimulator;
+export default Tournaments;

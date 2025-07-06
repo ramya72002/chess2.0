@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AcademySimulator = () => {
+const Chat = () => {
     return (
         <div>
-            <h1>Academy Simulator</h1>
-            <p>Welcome to the Academy Simulator page!</p>
+            <h1>Chat</h1>
+            <p>Welcome to the  Chat page!</p>
         </div>
     );
 };
 
-export default AcademySimulator;
+export default Chat;

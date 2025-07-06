@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AcademySimulator = () => {
+const Settings = () => {
     return (
         <div>
-            <h1>Academy Simulator</h1>
-            <p>Welcome to the Academy Simulator page!</p>
+            <h1>Settings</h1>
+            <p>Welcome to the Settings page!</p>
         </div>
     );
 };
 
-export default AcademySimulator;
+export default Settings;

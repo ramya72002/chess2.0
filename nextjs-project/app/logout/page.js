@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AcademySimulator = () => {
+const Logout = () => {
     return (
         <div>
-            <h1>Academy Simulator</h1>
-            <p>Welcome to the Academy Simulator page!</p>
+            <h1>Logout</h1>
+            <p>Welcome to the Logout page!</p>
         </div>
     );
 };
 
-export default AcademySimulator;
+export default Logout;
