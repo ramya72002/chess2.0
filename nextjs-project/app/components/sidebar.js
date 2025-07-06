@@ -5,12 +5,13 @@ import Link from "next/link";
 import {
   Home, LayoutList, Headphones, Zap, Flag, Flame,
   LayoutDashboard, Database, PlaySquare, BarChart,
-  Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network
+  Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network,Gauge
 } from "lucide-react";
 
 import "../styles/withSidebar.scss";
 
 const modules = [
+  { name: "Dashboard", path: "/", icon: <Gauge size={24} /> },
   { name: "Academy", path: "/academy", icon: <Home size={24} /> },
   { name: "Simul", path: "/simul", icon: <Network size={24} /> },
   { name: "Classroom", path: "/classroom", icon: <Headphones size={24} /> },
