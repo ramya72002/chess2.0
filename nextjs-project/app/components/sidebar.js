@@ -1,11 +1,11 @@
-// /app/components/Sidebar.js
 'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // 👈 import hook
 import {
   Home, LayoutList, Headphones, Zap, Flag, Flame,
   LayoutDashboard, Database, PlaySquare, BarChart,
-  Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network,Gauge
+  Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network, Gauge
 } from "lucide-react";
 
 import "../styles/withSidebar.scss";
@@ -32,14 +32,23 @@ const modules = [
 ];
 
 export default function Sidebar() {
+  const pathname = usePathname(); // 👈 get current route
+
   return (
     <aside className="sidebar">
-      {modules.map((mod, i) => (
-        <Link key={i} href={mod.path} className="sidebar-link">
-          {mod.icon}
-          <span>{mod.name}</span>
-        </Link>
-      ))}
+      {modules.map((mod, i) => {
+        const isActive = pathname === mod.path;
+        return (
+          <Link
+            key={i}
+            href={mod.path}
+            className={`sidebar-link ${isActive ? 'active' : ''}`}
+          >
+            {mod.icon}
+            <span>{mod.name}</span>
+          </Link>
+        );
+      })}
     </aside>
   );
 }
