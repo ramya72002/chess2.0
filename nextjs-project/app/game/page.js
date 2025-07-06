@@ -1,12 +1,11 @@
 import React from 'react';
 
-const AcademySimulator = () => {
+const Game = () => {
     return (
         <div>
-            <h1>Academy Simulator</h1>
-            <p>Welcome to the Academy Simulator page!</p>
+         <h1>Game</h1>
         </div>
     );
 };
 
-export default AcademySimulator;
+export default Game;
