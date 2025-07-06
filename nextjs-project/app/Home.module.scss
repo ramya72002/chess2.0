@@ -9,8 +9,9 @@
   }
   
   .title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
+    font-weight: 500;
   }
   
   .grid {
@@ -19,6 +20,7 @@
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
+   
   }
   
   .card {
@@ -39,6 +41,7 @@
   
   .card span {
     margin-top: 0.5rem;
-    font-size: 0.95rem;
+    font-size:calc(1rem + 1vmin);
+    font-weight: 400;
   }
   
