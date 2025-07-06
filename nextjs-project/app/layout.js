@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.variable} antialiased`}>
         <div style={{ display: "flex" }}>
           <PathAwareSidebar />
-          <main style={{ width: "100%", padding: "1rem" }}>
+          <main style={{ width: "100%"}}>
             {children}
           </main>
         </div>

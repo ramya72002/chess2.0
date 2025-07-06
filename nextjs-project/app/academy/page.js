@@ -2,7 +2,7 @@ import React from 'react';
 
 const AcademySimulator = () => {
     return (
-        <div>
+        <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '2rem' }}>
             <h1>Academy Simulator</h1>
             <p>Welcome to the Academy Simulator page!</p>
         </div>
