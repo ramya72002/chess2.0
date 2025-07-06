@@ -1,8 +1,9 @@
 'use client';
 
 import Link from "next/link";
-import { Home, LayoutList, Headphones, FlashLightning, Flag, Flame, LayoutDashboard, Database, PlaySquare, BarChart, Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network, Zap } from "lucide-react";
+import { Home, LayoutList, Headphones, Flag, Flame, LayoutDashboard, Database, PlaySquare, BarChart, Settings, Users, Funnel, BookOpen, MessageCircle, LogOut, Network, Zap } from "lucide-react";
 import styles from './Home.module.scss';
+import Sidebar from "./components/sidebar";
 
 export default function Home1() {
   const modules = [

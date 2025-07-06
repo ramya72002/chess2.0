@@ -1,10 +1,11 @@
 import { Poppins } from "next/font/google";
+import PathAwareSidebar from './components/PathAwareSidebar.jsx';
 import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "700"], // Include desired font weights
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -16,9 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        {children}
+        <div style={{ display: "flex" }}>
+          <PathAwareSidebar />
+          <main style={{ width: "100%", padding: "1rem" }}>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
 }
-
