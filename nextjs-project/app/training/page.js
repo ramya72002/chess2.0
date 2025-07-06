@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Chat = () => {
+const training = () => {
     return (
         <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '2rem' }}>
-            <h1>Chat</h1>
-            <p>Welcome to the  Chat page!</p>
+            <h1>training</h1>
+            <p>Welcome to the  training page!</p>
         </div>
     );
 };
 
-export default Chat;
+export default training;
