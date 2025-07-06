@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Leads = () => {
+const Lessons = () => {
     return (
         <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '2rem' }}>
-            <h1>Leads</h1>
-            <p>Welcome to the Leads page!</p>
+            <h1>Lessons</h1>
         </div>
     );
 };
 
-export default Leads;
+export default Lessons;

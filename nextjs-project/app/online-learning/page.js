@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Courses = () => {
+const OnlineLearning = () => {
     return (
         <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '2rem' }}>
-            <h1>Courses</h1>
-            <p>Welcome to the Courses page!</p>
+            <h1>Online-Learning</h1>
         </div>
     );
 };
 
-export default Courses;
+export default OnlineLearning;

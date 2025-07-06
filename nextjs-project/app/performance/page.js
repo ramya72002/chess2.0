@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Quiz = () => {
+const Performance = () => {
     return (
         <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '2rem' }}>
-        <h1>Quiz</h1>
+            <h1>Performance</h1>
         </div>
     );
 };
 
-export default Quiz;
+export default Performance;
